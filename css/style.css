@@ -1,0 +1,19 @@
+.grid{
+    height: 800px;
+    width: 1000px;
+    flex-wrap: wrap;
+}
+
+.cell{
+    border: 2px solid pink;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cell.selected{
+    background-color: lightblue;
+}

@@ -1,6 +1,11 @@
+#button-play{
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 3px 0px;
+}
+
 .grid{
     height: 800px;
-    width: 1000px;
+    width: 800px;
     flex-wrap: wrap;
 }
 
@@ -16,4 +21,13 @@
 
 .cell.selected{
     background-color: lightblue;
+}
+
+.score-card{
+    padding: 1rem;
+    border-radius: 13px;
+    text-align: center;
+    align-self: flex-start;
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 3px 0px;
 }

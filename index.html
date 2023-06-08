@@ -19,20 +19,37 @@
 </head>
 
 <body>
-    <header>
-        <div class="container text-center">
-            <h1>CAMPO MINATO</h1>
-            <div>
-                <button id="button-play" class="btn btn-secondary">GIOCA!</button>
+    <div class="bg-dark text-white">
+
+        <header>
+            <div class="container text-center">
+
+                <h1>CAMPO MINATO</h1>
+                <!-- select -->
+                <label for="level">Seleziona il livello:</label>
+                <select id="level">
+                    <option value="easy">Facile</option>
+                    <option value="normal">Normale</option>
+                    <option value="hard">Difficile</option>
+                </select>
+
+                <!-- button -->
+                <button id="button-play" class="btn btn-secondary ms-2">GIOCA!</button>
+
             </div>
-        </div>
-    </header>
-    <main class="bg-dark text-white p-4 mt-2">
-        <div class="container">
-            <div id="grid" class="grid d-flex align-items-center justify-content-center">
+        </header>
+        <main class="p-4 mt-2">
+            <div class="container d-flex justify-content-between">
+                <div id="grid" class="grid d-flex align-items-center justify-content-center">
+                </div>
+                <!-- score -->
+                <div class="score-card bg-secondary mt-5 d-none">
+                    <h3>Il tuo punteggio :</h3>
+                    <p id="score" class="text-danger h3">0</p>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
 </body>
 

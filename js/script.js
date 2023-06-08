@@ -43,20 +43,25 @@ button.addEventListener('click', () => {
         //mettere la cella in ascolto
     
         cell.addEventListener('click', function(){
-            let isSelected;
+            const isSelected = cell.classList.contains('selected');
+            //verificare che la cella non sia selected
             if(!isSelected){
-            //inserire il numero all'interno delle celle
-            cell.classList.add('selected');
-            const cellNumber = [++i];
-            cell.innerText = cellNumber;
-            console.log(i);
-            score++;
-            scoreDisplay.innerText = score;
+                //inserire il numero all'interno delle celle
+                cell.classList.add('selected');
+                const cellNumber = [i + 1];
+                cell.innerText = cellNumber;
+                console.log(i);
+                score++;
             }
+                
+            
+            
+            //punteggio nel display
+            scoreDisplay.innerText = score;
 
         })
-    }  
-       
-    
+        
+    }
+
 })
 

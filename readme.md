@@ -20,3 +20,12 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
      - Al click sulla cella,
        - stampare il numero della cella cliccata in console
        - colorare la cella d'azzurro
+5. preparare un contatore per il punteggio
+
+- incrementare il punteggio ogni volta che l'utente clicca su una cella
+- se la cella è già stata cliccata, il punteggio non viene incrementato
+
+**BONUS**
+
+- aggiungere una select per il livello di difficoltà del gioco
+  -

@@ -29,6 +29,7 @@ button.addEventListener('click', () => {
     const cols = 10;
     const rows = 10;
     const cellAmount = rows * cols;
+    let score = 0;
     
     //creare 100 celle
     
@@ -48,11 +49,12 @@ button.addEventListener('click', () => {
             cell.classList.add('selected');
             const cellNumber = [++i];
             cell.innerText = cellNumber;
-            console.log(i)
+            console.log(i);
+            score++;
+            scoreDisplay.innerText = score;
             }
 
         })
-
     }  
        
     

@@ -17,10 +17,12 @@
     justify-content: center;
     align-items: center;
     color: black;
+    cursor: pointer;
 }
 
 .cell.selected{
     background-color: lightblue;
+    cursor: default;
 }
 
 .score-card{

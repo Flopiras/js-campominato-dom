@@ -25,7 +25,7 @@
     cursor: default;
 }
 
-.score-card{
+#score-card{
     padding: 1rem;
     border-radius: 13px;
     text-align: center;

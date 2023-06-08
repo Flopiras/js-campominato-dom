@@ -21,11 +21,11 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
        - stampare il numero della cella cliccata in console
        - colorare la cella d'azzurro
 5. preparare un contatore per il punteggio
-
-- incrementare il punteggio ogni volta che l'utente clicca su una cella
-- se la cella è già stata cliccata, il punteggio non viene incrementato
+   - incrementare il punteggio ogni volta che l'utente clicca su una cella
+   - se la cella è già stata cliccata, il punteggio non viene incrementato
+6. creare 16 bombe con indice casuale
+   - verificare che l'indice generato non venga ripetuto
 
 **BONUS**
 
-- aggiungere una select per il livello di difficoltà del gioco
-  -
+- ## aggiungere una select per il livello di difficoltà del gioco

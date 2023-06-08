@@ -25,6 +25,10 @@
     cursor: default;
 }
 
+.cell.danger{
+    background-color: red;
+}
+
 #score-card{
     padding: 1rem;
     border-radius: 13px;

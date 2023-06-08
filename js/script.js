@@ -13,6 +13,23 @@ function createCell(cellAmount){
 }
 
 
+//generare bombe
+function createBombs(totalCell, bombNumber){
+    const bombs = [];
+    
+    while(bombs.length < bombNumber){
+        let randomBomb;
+        do{
+        randomBomb = Math.floor(Math.random() * totalCell) + 1;
+        }
+        while(bombs.includes(randomBomb));
+        bombs.push(randomBomb);
+    }
+    
+    return bombs
+}
+
+
 //elementi del DOM
 const grid = document.getElementById('grid');
 const button = document.getElementById('button-play');
@@ -29,10 +46,15 @@ button.addEventListener('click', () => {
     const cols = 10;
     const rows = 10;
     const cellAmount = rows * cols;
+    const bombAmount = 16;
     let score = 0;
     
+
+    //creare le bombe
+    const bombs = createBombs(cellAmount, bombAmount);
+    console.log(bombs);
+
     //creare 100 celle
-    
     for(let i = 0; i < cellAmount; i++){
         const cell = createCell();
         
@@ -41,17 +63,23 @@ button.addEventListener('click', () => {
         
         
         //mettere la cella in ascolto
-    
         cell.addEventListener('click', function(){
-            const isSelected = cell.classList.contains('selected');
             //verificare che la cella non sia selected
-            if(!isSelected){
-                //inserire il numero all'interno delle celle
-                cell.classList.add('selected');
-                const cellNumber = [i + 1];
-                cell.innerText = cellNumber;
-                console.log(i);
-                score++;
+            const isSelected = cell.classList.contains('selected');
+            if (isSelected) return
+            
+            //inserire il numero all'interno delle celle
+            cell.classList.add('selected');
+            const cellNumber = [i + 1];
+            cell.innerText = cellNumber;
+            console.log(i);
+            score++;
+            
+            //verificare se l'indice della cella sta tra le bombe
+            const isBomb = bombs.includes(++i);
+            //aggiungere le bombe
+            if(isBomb){
+                cell.classList.add('danger');
             }
                 
             

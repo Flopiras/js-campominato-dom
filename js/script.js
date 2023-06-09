@@ -30,16 +30,16 @@ function createBombs(totalCell, bombNumber){
 }
 
 //finire la partita
-function endGame(totalScore, maxScore){
+function endGame(totalScore, maxScore, isBomb){
 
     let message = '';
 
     //condizioni di fine partita
     if(isBomb){
-     message = `HAI PERSO! Hai totalizzato ${totalScore} punti`;
+     message = alert(`HAI PERSO! Hai totalizzato ${totalScore} punti`);
     }
     else if(totalScore === maxScore){
-        message = `COMPLIMENTI HAI VINTO! Hai totalizzato ${maxScore}`;
+        message = alert(`COMPLIMENTI HAI VINTO! Hai totalizzato ${maxScore}`);
     }
 
     return message
@@ -64,6 +64,7 @@ button.addEventListener('click', () => {
     const cellAmount = rows * cols;
     const bombAmount = 16;
     let score = 0;
+    const maxScore = cellAmount - bombAmount;
 
     
 
@@ -100,9 +101,10 @@ button.addEventListener('click', () => {
             }
                 
             
-            
             //punteggio nel display
             scoreDisplay.innerText = score;
+            
+            endGame(maxScore, score, isBomb);
 
         })
         

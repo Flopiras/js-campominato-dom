@@ -29,6 +29,22 @@ function createBombs(totalCell, bombNumber){
     return bombs
 }
 
+//finire la partita
+function endGame(totalScore, maxScore){
+
+    let message = '';
+
+    //condizioni di fine partita
+    if(isBomb){
+     message = `HAI PERSO! Hai totalizzato ${totalScore} punti`;
+    }
+    else if(totalScore === maxScore){
+        message = `COMPLIMENTI HAI VINTO! Hai totalizzato ${maxScore}`;
+    }
+
+    return message
+}
+
 
 //elementi del DOM
 const grid = document.getElementById('grid');
@@ -48,6 +64,7 @@ button.addEventListener('click', () => {
     const cellAmount = rows * cols;
     const bombAmount = 16;
     let score = 0;
+
     
 
     //creare le bombe
